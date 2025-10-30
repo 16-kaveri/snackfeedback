@@ -9,16 +9,21 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
+ const handleLogin = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (email === 'admin@example.com' && password === 'admin123') {
-      localStorage.setItem('session', 'active');
-      router.push('/dashboard');
-    } else {
-      setError('Invalid credentials! Try admin@example.com / admin123');
-    }
-  };
+  if (email === 'admin@example.com' && password === 'admin123') {
+    const sessionData = {
+      active: true,
+      timestamp: new Date().getTime(), // Save login time
+    };
+    localStorage.setItem('session', JSON.stringify(sessionData));
+    router.push('/dashboard');
+  } else {
+    setError('Invalid credentials! Try admin@example.com / admin123');
+  }
+};
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
