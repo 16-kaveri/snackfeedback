@@ -36,7 +36,7 @@ export default function Dashboard() {
       return;
     }
 
-    fetch('http://localhost:3000/api/customers')
+    fetch('/api/customers')
       .then((res) => res.json())
       .then((data) => {
         setCustomers(data);

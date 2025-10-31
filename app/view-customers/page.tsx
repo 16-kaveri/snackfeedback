@@ -17,7 +17,7 @@ export default function ViewCustomersPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/customers")
+    fetch("/api/customers")
       .then((res) => res.json())
       .then((data) => {
         setFeedbacks(data);
