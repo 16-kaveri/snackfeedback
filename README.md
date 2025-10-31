@@ -27,5 +27,5 @@ Open http://localhost:3000
  to view it in your browser
 
 # Use Credential for Login
-# Username = admin@example.com
-# Password = admin123
+Username = admin@example.com
+Password = admin123
