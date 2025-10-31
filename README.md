@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Overview Of Snack-Feedback Web Application
+This project is a Next.js-based web application developed to collect and manage customer feedback for a snack product currently in the market. It includes essential modules like Login, Dashboard, Create Customer, and View Customers, ensuring a smooth and interactive user experience.
 
-## Getting Started
+The application features a secure login system with session management, redirecting users automatically to the login page when the session expires. The Dashboard provides an overview of mock insights, while the Create Customer page allows users to submit detailed feedback through a structured form. The View Customers page displays all submitted customer data in a clean, tabular format.
 
-First, run the development server:
+All customer data is stored and managed using MongoDB, ensuring reliability and scalability. The project follows best practices in version control with multiple commits and has been deployed online for easy access and testing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# How to run locally-
+1)Clone the repository
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone https://github.com/16-kaveri/snackfeedback
+cd snackfeedback
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2)Install dependencies
 
-## Learn More
+npm install
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3)Create a .env.local file and add your MongoDB connection string.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4)Run the development server
 
-## Deploy on Vercel
+5)npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000
+ to view it in your browser
