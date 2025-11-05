@@ -72,7 +72,7 @@ export default function CreateCustomerPage() {
 
   return (
     <div className="flex h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-100 overflow-hidden">
-      <Sidebar  />
+     
 
       <div className="flex-1 flex justify-center items-center relative">
         <div className="relative bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-3xl border border-yellow-200 transition-transform hover:scale-[1.01] duration-300">
