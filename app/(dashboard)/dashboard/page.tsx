@@ -89,36 +89,38 @@ export default function Dashboard() {
         </p>
       ) : (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      
-            <div className="bg-white/90 p-6 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-              <Users className="mx-auto mb-3 text-indigo-600" size={30} />
-              <h3 className="text-lg font-semibold text-gray-600">Total Customers</h3>
-              <p className="text-4xl font-extrabold mt-2 text-indigo-600">{totalCustomers}</p>
-            </div>
+          {/* Summary Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
 
-        
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl shadow-lg text-center hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-              <ThumbsUp className="mx-auto mb-3 text-green-600" size={30} />
-              <h3 className="text-lg font-semibold text-gray-600">Positive Reviews</h3>
-              <p className="text-4xl font-extrabold mt-2 text-green-600">{positiveReviews}</p>
-            </div>
+              {/* Total Customers */}
+              <div className="bg-white/90 p-6 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                <Users className="mx-auto mb-3 text-indigo-600" size={30} />
+                <h3 className="text-lg font-semibold text-gray-600">Total Customers</h3>
+                <p className="text-4xl font-extrabold mt-2 text-indigo-600">{totalCustomers}</p>
+              </div>
 
-         
-            <div className="bg-gradient-to-br from-red-50 to-pink-100 p-6 rounded-2xl shadow-lg text-center hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-              <ThumbsDown className="mx-auto mb-3 text-red-600" size={30} />
-              <h3 className="text-lg font-semibold text-gray-600">Negative Reviews</h3>
-              <p className="text-4xl font-extrabold mt-2 text-red-600">{negativeReviews}</p>
-            </div>
-          </div>
+              {/* Positive Reviews */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl shadow-lg text-center hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                <ThumbsUp className="mx-auto mb-3 text-green-600" size={30} />
+                <h3 className="text-lg font-semibold text-gray-600">Positive Reviews</h3>
+                <p className="text-4xl font-extrabold mt-2 text-green-600">{positiveReviews}</p>
+              </div>
 
+              {/* Negative Reviews */}
+              <div className="bg-gradient-to-br from-red-50 to-pink-100 p-6 rounded-2xl shadow-lg text-center hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                <ThumbsDown className="mx-auto mb-3 text-red-600" size={30} />
+                <h3 className="text-lg font-semibold text-gray-600">Negative Reviews</h3>
+                <p className="text-4xl font-extrabold mt-2 text-red-600">{negativeReviews}</p>
+              </div>
+
+            </div>
         
           <section>
             <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
               🍪 Popular Snack Products
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-4 gap-6">
               {snacks.map((snack, index) => (
                 <div
                   key={index}
